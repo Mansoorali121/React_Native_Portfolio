@@ -45,13 +45,13 @@ export default function About() {
 
         {/* Description */}
         <p className="text-gray-700 leading-relaxed text-base sm:text-lg mb-4 font-[Inter]">
-          I am a Motivated individual who loves learning new
-          skills. With a strong interest in Mobile App Development and  and Artificial Intelligence, I enjoy
+          I am a Motivated Python  individual who loves learning new
+          skills. With  strong interest in Mobile App Development and  and Artificial Intelligence, I enjoy
           solving problems, working independently, and always strive to grow
           both personally and professionally.
         </p>
         <p className="text-gray-700 leading-relaxed text-base sm:text-lg font-[Inter]">
-          I enjoy exploring new ideas and turning them into practical solutions.
+          I always enjoy exploring new ideas and turning them into practical solutions.
           My goal is to keep improving myself and make a positive impact through
         Mobile Application Development.
         </p>
