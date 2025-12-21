@@ -37,7 +37,7 @@ export default function Contact() {
               htmlFor="name"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Your Name
+              Your Full Name
             </label>
             <input
               type="text"
@@ -54,7 +54,7 @@ export default function Contact() {
               htmlFor="email"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Your Email
+               Email address
             </label>
             <input
               type="email"
