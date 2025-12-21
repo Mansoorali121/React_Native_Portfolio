@@ -65,7 +65,7 @@ export default function About() {
             className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full shadow-lg hover:from-indigo-700 hover:to-purple-700 transition-transform transform hover:scale-105 font-medium text-sm sm:text-base"
           >
             <Download className="w-5 h-5" />
-            Download CV
+            Download My CV
           </a>
 
           {/* Contact Button */}
@@ -74,7 +74,7 @@ export default function About() {
             className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full shadow-lg hover:from-blue-700 hover:to-indigo-700 transition-transform transform hover:scale-105 font-medium text-sm sm:text-base"
           >
             <Mail className="w-5 h-5" />
-            Let’s Connect
+            Lets Connect to Build Something Great
           </a>
         </div>
       </motion.div>
