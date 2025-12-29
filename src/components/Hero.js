@@ -158,9 +158,7 @@ export default function Hero() {
           A React Native Developer
         </h2>
         <p className="mt-6 text-gray-700 leading-relaxed">
-          I am a React Native and React.js developer with AI features
-          implementation. I build apps that solve real-world problems with
-          elegant and scalable solutions.
+          I am a React Native and React.js developer with over 6 Months of Self Learning. I build apps which solbve real world problems with elegant and scalable solutions.
         </p>
 
         <button className="mt-8 px-8 py-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105">
