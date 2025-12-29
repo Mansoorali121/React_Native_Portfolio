@@ -46,7 +46,7 @@ export default function About() {
         {/* Description */}
         <p className="text-gray-700 leading-relaxed text-base sm:text-lg mb-4 font-[Inter]">
           I am a Motivated Programmer who loves learning new
-          skills. With  strong interest in Mobile App Development and  and Artificial Intelligence, I enjoy
+          skills. With  strong interest in Mobile App Development and Artificial Intelligence, I enjoy
           solving problems, working independently, and always strive to grow
           both personally and professionally.
         </p>
