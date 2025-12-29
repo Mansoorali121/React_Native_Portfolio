@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.24a6a742.css",
+    "main.js": "/static/js/main.47aab8d2.js",
+    "static/media/Mypic.jpeg": "/static/media/Mypic.21465ecbd9223e68509d.jpeg",
+    "static/media/Ecommerce.jpg": "/static/media/Ecommerce.eb7f23b4f783c6f4b4e7.jpg",
+    "static/media/WhatsApp.jpeg": "/static/media/WhatsApp.0009d379311f8c84e593.jpeg",
+    "static/media/Mansoor.jpg": "/static/media/Mansoor.44c2feaaa2fce205db5f.jpg",
+    "static/media/SocialAPp3.jpg": "/static/media/SocialAPp3.6a904bbab7bc45283e89.jpg",
+    "static/media/SocialApp.jpg": "/static/media/SocialApp.7f1b798e8838178a68d3.jpg",
+    "static/media/SocialApp1.jpg": "/static/media/SocialApp1.fbcfefcb397f24fda947.jpg",
+    "static/media/namelogo.png": "/static/media/namelogo.b5f74f46b5a9ea8ab71a.png",
+    "static/media/SocialApp2.jpg": "/static/media/SocialApp2.fc2715a0a21dda569bf4.jpg",
+    "index.html": "/index.html",
+    "main.24a6a742.css.map": "/static/css/main.24a6a742.css.map",
+    "main.47aab8d2.js.map": "/static/js/main.47aab8d2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24a6a742.css",
+    "static/js/main.47aab8d2.js"
+  ]
+}

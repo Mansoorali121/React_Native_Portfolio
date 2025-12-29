@@ -60,7 +60,7 @@ export default function About() {
         <div className="mt-8 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start">
           {/* Download CV Button */}
           <a
-            href="/Mansoor_Ali_CV.pdf" // <- apna CV file yahan dalna (public folder ma)
+            href="/Mansoor_Ali_Cv.pdf" 
             download
             className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full shadow-lg hover:from-indigo-700 hover:to-purple-700 transition-transform transform hover:scale-105 font-medium text-sm sm:text-base"
           >
