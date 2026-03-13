@@ -5,140 +5,148 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="px-6 md:px-20 py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50"
+      className="px-6 md:px-20 py-24 bg-black text-white"
     >
-      <div className="max-w-4xl mx-auto text-center">
-        {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"
-        >
-          Contact Me
-        </motion.h2>
-        <p className="mt-4 text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
-          Got a project idea, collaboration request, or just want to say hello? 
-          Fill out the form below and I’ll get back to you as soon as possible.
-        </p>
-      </div>
+      {/* Heading */}
 
-      {/* Form Section */}
-      <motion.form
-        initial={{ opacity: 0, y: 50 }}
+      <motion.div
+        initial={{ opacity: 0, y: -40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="mt-12 max-w-3xl mx-auto bg-white shadow-xl rounded-2xl p-8 md:p-12 border border-gray-100"
+        viewport={{ once: true }}
+        className="text-center max-w-3xl mx-auto"
       >
-        {/* Name & Email */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label
-              htmlFor="name"
-              className="block text-sm font-medium text-gray-700 mb-2"
-            >
-              Your Full Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your name"
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-gray-700"
-              required
-            />
-          </div>
+        <p className="text-gray-400 uppercase tracking-widest text-sm">
+          Get In Touch
+        </p>
 
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-700 mb-2"
-            >
-               Email address
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email address"
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-gray-700"
-              required
-            />
-          </div>
+        <h2 className="text-3xl md:text-5xl font-extrabold mt-3
+        bg-gradient-to-r from-white via-gray-300 to-gray-500
+        bg-clip-text text-transparent">
+          Contact Me
+        </h2>
+
+        <p className="mt-6 text-gray-400 leading-relaxed">
+          Got a project idea or collaboration request?
+          Let’s build something amazing together 🚀
+        </p>
+      </motion.div>
+
+      {/* Form */}
+
+      <motion.form
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="mt-16 max-w-3xl mx-auto
+        backdrop-blur-xl bg-white/10
+        border border-white/20
+        rounded-2xl shadow-2xl p-8 md:p-12"
+      >
+
+        {/* Name & Email */}
+
+        <div className="grid md:grid-cols-2 gap-6">
+
+          <input
+            type="text"
+            placeholder="Your Full Name"
+            required
+            className="w-full px-4 py-3 rounded-xl
+            bg-white/5 border border-white/20
+            focus:border-white/50 focus:ring-2 focus:ring-white/20
+            outline-none transition duration-300"
+          />
+
+          <input
+            type="email"
+            placeholder="Your Email Address"
+            required
+            className="w-full px-4 py-3 rounded-xl
+            bg-white/5 border border-white/20
+            focus:border-white/50 focus:ring-2 focus:ring-white/20
+            outline-none transition duration-300"
+          />
+
         </div>
 
         {/* Message */}
-        <div className="mt-6">
-          <label
-            htmlFor="message"
-            className="block text-sm font-medium text-gray-700 mb-2"
-          >
-            Your Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            placeholder="Write your message..."
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-gray-700 resize-none"
-            required
-          ></textarea>
-        </div>
 
-        {/* Submit Button */}
+        <textarea
+          rows="5"
+          placeholder="Write your message..."
+          required
+          className="mt-6 w-full px-4 py-3 rounded-xl
+          bg-white/5 border border-white/20
+          focus:border-white/50 focus:ring-2 focus:ring-white/20
+          outline-none resize-none transition duration-300"
+        ></textarea>
+
+        {/* Button */}
+
         <div className="mt-8 flex justify-center">
+
           <button
             type="submit"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full shadow-lg hover:from-blue-700 hover:to-indigo-700 transition-transform transform hover:scale-105 font-medium"
+            className="relative inline-flex items-center gap-2 px-8 py-3
+            rounded-full border border-white/30
+            bg-white/10 backdrop-blur-lg
+            hover:bg-white/20 transition duration-300
+            hover:scale-105 shadow-lg"
           >
             <Send className="w-5 h-5" />
             Send Message
           </button>
+
         </div>
+
       </motion.form>
 
-      {/* Footer Section */}
-      <footer className="mt-16 border-t border-gray-200 pt-8 text-center">
-        {/* Social Icons */}
-        <div className="flex justify-center gap-6 mb-6">
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-white shadow-md border hover:scale-110 hover:text-blue-600 transition-transform"
-          >
-            <Linkedin className="w-6 h-6" />
-          </a>
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-white shadow-md border hover:scale-110 hover:text-gray-800 transition-transform"
-          >
-            <Github className="w-6 h-6" />
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-white shadow-md border hover:scale-110 hover:text-blue-400 transition-transform"
-          >
-            <Twitter className="w-6 h-6" />
-          </a>
-          <a
-            href="mailto:youremail@example.com"
-            className="p-3 rounded-full bg-white shadow-md border hover:scale-110 hover:text-red-500 transition-transform"
-          >
-            <Mail className="w-6 h-6" />
-          </a>
+      {/* Social Section */}
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="mt-20 text-center"
+      >
+
+        <div className="flex justify-center gap-6">
+
+          {[
+            { icon: Linkedin, link: "https://linkedin.com" },
+            { icon: Github, link: "https://github.com" },
+            { icon: Twitter, link: "https://twitter.com" },
+            { icon: Mail, link: "mailto:youremail@example.com" },
+          ].map((item, index) => (
+            <a
+              key={index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full
+              bg-white/10 border border-white/20
+              backdrop-blur-lg
+              hover:scale-110 hover:bg-white/20
+              transition duration-300"
+            >
+              <item.icon className="w-6 h-6" />
+            </a>
+          ))}
+
         </div>
 
-        {/* Copyright */}
-        <p className="text-gray-500 text-sm">
-          © {new Date().getFullYear()} Developed by  {" "}
-          <span className="font-semibold text-gray-700">Mansoor Ali</span>. All rights reserved.
+        <p className="mt-8 text-gray-500 text-sm">
+          © {new Date().getFullYear()} Developed by{" "}
+          <span className="text-white font-semibold">
+            Mansoor Ali
+          </span>
         </p>
-      </footer>
+
+      </motion.div>
+
     </section>
   );
 }
