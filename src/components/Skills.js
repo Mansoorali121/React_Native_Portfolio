@@ -72,47 +72,52 @@
 // }
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Skills() {
+
+  const [selected, setSelected] = useState(null);
+
   const skills = [
     {
       title: "React Native",
-      desc: "Cross-platform mobile app development using React Native, delivering iOS & Android apps with native-like performance.",
+      desc: "Cross-platform mobile app development using React Native to build high-performance apps for both iOS and Android.",
     },
     {
-      title: "Mobile App Optimization",
-      desc: "Optimizing performance through code efficiency, image compression, and best practices for faster loading times.",
+      title: "JavaScript",
+      desc: "Strong command over modern JavaScript (ES6+). Creating dynamic and interactive applications.",
+    },
+    {
+      title: "React.js",
+      desc: "Building scalable single-page applications using modern React architecture.",
+    },
+    {
+      title: "Firebase",
+      desc: "Realtime database, authentication and backend services using Firebase.",
     },
     {
       title: "Tailwind CSS",
-      desc: "Utility-first CSS framework for building sleek, responsive, and highly customizable user interfaces quickly.",
+      desc: "Utility-first CSS framework for building sleek and responsive UI.",
     },
     {
       title: "UI/UX Enhancement",
-      desc: "Designing intuitive and user-friendly interfaces that make navigating and interacting with websites effortless.",
-    },
-    {
-      title: "React.js Development",
-      desc: "Building scalable, fast, and maintainable single-page applications using React.js and modern libraries.",
-    },
-    {
-      title: "Responsive Web Design",
-      desc: "Websites that look great and function smoothly on all devices, whether mobile, tablet, or desktop. Focused on seamless user experience across screen sizes.",
+      desc: "Designing intuitive and user-friendly interfaces.",
     },
     {
       title: "Python",
-      desc: "Proficient in Python for web apps, automation, and data-driven solutions, ensuring clean and efficient code practices.",
+      desc: "Using Python for automation and backend solutions.",
     },
-
     {
-      title: "JavaScript",
-      desc: "Strong command over modern JavaScript (ES6+). Building interactive, dynamic, and scalable web solutions.",
+      title: "Figma",
+      desc: "Designing modern UI/UX layouts and prototypes.",
     },
   ];
 
   return (
-    <section id="skills" className="px-6 md:px-20 py-20 bg-white">
-      {/* Section Heading */}
+    <section id="skills" className="px-6 md:px-20 py-20 bg-black text-white">
+
+      {/* Heading */}
+
       <motion.div
         initial={{ opacity: 0, y: -40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -120,39 +125,70 @@ export default function Skills() {
         viewport={{ once: true }}
         className="text-center mb-12"
       >
-        <p className="text-gray-500 text-base md:text-lg font-medium tracking-wide uppercase">
+        <p className="text-gray-400 text-base md:text-lg uppercase tracking-wider">
           My Skills
         </p>
+
         <h1 className="text-3xl md:text-4xl font-extrabold mt-2 
-               bg-gradient-to-r from-blue-600 to-indigo-600 
-               bg-clip-text text-transparent">
-  My Expertise
-</h1>
+        bg-gradient-to-r from-white via-gray-300 to-gray-500 
+        bg-clip-text text-transparent">
+          My Expertise
+        </h1>
       </motion.div>
 
-      {/* Cards Grid */}
+
+      {/* Cards */}
+
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {skills.map((skill, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: i * 0.1 }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.05, rotate: 1 }}
-            className="p-6 bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-md 
-                       hover:shadow-xl transition-all duration-300 cursor-pointer 
-                       border-2 border-transparent hover:border-blue-500 hover:ring-2 hover:ring-blue-300"
-          >
-            <h2 className="text-lg md:text-xl font-semibold mb-3 text-center text-gray-900 tracking-wide">
-              {skill.title}
-            </h2>
-            <p className="text-gray-600 text-sm md:text-base text-center leading-relaxed font-light">
-              {skill.desc}
-            </p>
-          </motion.div>
-        ))}
+
+        {skills.map((skill, i) => {
+
+          const isSelected = selected === i;
+
+          return (
+
+            <motion.div
+              key={i}
+
+              onClick={() => setSelected(i)}
+
+              initial={{ opacity: 0, y: 40 }}
+
+              whileInView={{ opacity: 1, y: 0 }}
+
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+
+              viewport={{ once: true }}
+
+              whileHover={{ scale: 1.05, rotate: 1 }}
+
+              className={`p-6 rounded-2xl shadow-md cursor-pointer 
+              transition-all duration-300
+              backdrop-blur-lg bg-white/10
+
+              ${
+                isSelected
+                  ? "border-4 border-white scale-105 shadow-2xl"
+                  : "border border-white/20"
+              }`}
+            >
+
+              <h2 className="text-lg md:text-xl font-semibold mb-3 text-center">
+                {skill.title}
+              </h2>
+
+              <p className="text-gray-300 text-sm md:text-base text-center leading-relaxed">
+                {skill.desc}
+              </p>
+
+            </motion.div>
+
+          );
+
+        })}
+
       </div>
+
     </section>
   );
 }

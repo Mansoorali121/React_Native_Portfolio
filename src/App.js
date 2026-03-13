@@ -1,8 +1,4 @@
 
-// import Projects from "./components/Projects";
-// import Testimonials from "./components/Testimonials";
-// import Contact from "./components/Contact";
-// import Footer from "./components/Footer";
 
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -13,16 +9,13 @@ import Testimonials from "./components/Testimonials";
 
 function App() {
   return (
-    <div>
+    <div className="bg-gradient-to-br from-black via-gray-900 to-black text-white">
       <Navbar />
       <Hero />
       <Skills />
       <About />
-
-      <Testimonials/>
-      <Contact/>
-      
-      {/* Add other sections here */}
+      <Testimonials />
+      <Contact />
     </div>
   );
 }

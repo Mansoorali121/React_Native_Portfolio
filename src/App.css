@@ -1,0 +1,62 @@
+/* slow ring rotation */
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-slow {
+  animation: spinSlow 25s linear infinite;
+}
+
+/* opposite rotation */
+
+.spin-reverse {
+  animation: spinSlow 35s linear infinite reverse;
+}
+
+/* floating image */
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* text fade animation */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text {
+  animation: fadeUp 1.5s ease;
+}
+
+.hero-image {
+  animation: fadeUp 2s ease;
+}
