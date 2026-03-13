@@ -1,84 +1,126 @@
 import { motion } from "framer-motion";
-import { Download, Mail } from "lucide-react"; // icons for buttons
-import Mansoor from "./Mansoor.jpg"
+import { Download, Mail } from "lucide-react";
+import Mansoor from "./Mansoor.jpg";
+
 export default function About() {
   return (
     <section
       id="about"
-      className="flex flex-col md:flex-row items-center gap-12 md:gap-20 px-6 md:px-20 py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50"
+      className="flex flex-col lg:flex-row items-center gap-16 px-6 md:px-20 py-24 bg-black text-white"
     >
       {/* LEFT IMAGE */}
+
       <motion.div
-        initial={{ opacity: 0, x: -50 }}
+        initial={{ opacity: 0, x: -80 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
-        className="md:w-1/2 flex justify-center"
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="lg:w-1/2 flex justify-center"
       >
-        <div className="relative">
-          {/* Decorative Blur Circle */}
-          <div className="absolute -top-8 -left-8 w-64 h-64 md:w-80 md:h-80 bg-blue-200/40 rounded-full blur-3xl -z-10"></div>
+        <div className="relative group">
+
+          {/* glow background */}
+
+          <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent blur-3xl rounded-full"></div>
+
+          {/* rotating ring */}
+
+          <div className="absolute w-72 h-72 md:w-96 md:h-96 border border-white/20 rounded-full animate-spin-slow"></div>
 
           <img
             src={Mansoor}
             alt="About Me"
-            className="w-64 md:w-[360px] lg:w-[400px] rounded-2xl shadow-xl border-4 border-white object-cover m-8"
+            className="relative w-64 md:w-[360px] lg:w-[400px] rounded-2xl border border-white/20 shadow-2xl object-cover transition duration-500 group-hover:scale-105"
           />
         </div>
       </motion.div>
 
       {/* RIGHT CONTENT */}
+
       <motion.div
-        initial={{ opacity: 0, x: 50 }}
+        initial={{ opacity: 0, x: 80 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
-        className="md:w-1/2 text-center md:text-left"
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="lg:w-1/2 text-center lg:text-left"
       >
-        {/* Small Heading */}
-        <p className="text-blue-600 font-semibold tracking-wide uppercase mb-2 text-sm md:text-base">
+        {/* small heading */}
+
+        <p className="text-gray-400 uppercase tracking-widest text-sm">
           About
         </p>
 
-        {/* Main Heading */}
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6 leading-tight">
+        {/* main heading */}
+
+        <h1
+          className="text-3xl md:text-4xl lg:text-5xl font-extrabold mt-3 mb-8
+        bg-gradient-to-r from-white via-gray-300 to-gray-500 
+        bg-clip-text text-transparent"
+        >
           About Me
         </h1>
 
-        {/* Description */}
-        <p className="text-gray-700 leading-relaxed text-base sm:text-lg mb-4 font-[Inter]">
-          I am a Motivated Programmer who loves learning new
-          skills. With  strong interest in Mobile App Development and Artificial Intelligence, I enjoy
-          solving problems, working independently, and always strive to grow
-          both personally and professionally.
-        </p>
-        <p className="text-gray-700 leading-relaxed text-base sm:text-lg font-[Inter]">
-          I always enjoy exploring new ideas and turning them into practical solutions.
-          My goal is to keep improving myself and make a positive impact through
-        Mobile Application Development.
-        </p>
+        {/* TEXT 2 COLUMNS */}
 
-        {/* CTA Buttons */}
-        <div className="mt-8 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start">
-          {/* Download CV Button */}
+        <div className="grid md:grid-cols-2 gap-6 text-gray-300 text-base leading-relaxed">
+
+          <p>
+            I am a motivated programmer who loves learning new skills.
+            With strong interest in Mobile App Development and Artificial
+            Intelligence, I enjoy solving problems and working independently.
+          </p>
+
+          <p>
+            I always explore new ideas and turn them into practical solutions.
+            My goal is to continuously improve myself and build impactful
+            mobile applications.
+          </p>
+
+        </div>
+
+        {/* BUTTONS */}
+
+        <div className="mt-10 flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+
+          {/* Download CV */}
+
           <a
-            href="/Mansoor2.pdf" 
+            href="/Mansoor2.pdf"
             download
-            className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full shadow-lg hover:from-indigo-700 hover:to-purple-700 transition-transform transform hover:scale-105 font-medium text-sm sm:text-base"
+            className="relative inline-flex items-center justify-center gap-2 px-8 py-3 
+            rounded-full border border-white/30 bg-white/10 backdrop-blur-lg
+            text-white font-medium overflow-hidden group"
           >
-            <Download className="w-5 h-5" />
-            Download My CV
+
+            <span className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition duration-500"></span>
+
+            <Download className="w-5 h-5 relative z-10" />
+
+            <span className="relative z-10">Download My CV</span>
+
           </a>
 
-          {/* Contact Button */}
+          {/* Contact */}
+
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full shadow-lg hover:from-blue-700 hover:to-indigo-700 transition-transform transform hover:scale-105 font-medium text-sm sm:text-base"
+            className="relative inline-flex items-center justify-center gap-2 px-8 py-3 
+            rounded-full border border-white/30 bg-white/10 backdrop-blur-lg
+            text-white font-medium overflow-hidden group"
           >
-            <Mail className="w-5 h-5" />
-            Lets Connect to Build Something Great
+
+            <span className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition duration-500"></span>
+
+            <Mail className="w-5 h-5 relative z-10" />
+
+            <span className="relative z-10">
+              Lets Connect to Build Something Great
+            </span>
+
           </a>
+
         </div>
       </motion.div>
     </section>
   );
 }
-// 
