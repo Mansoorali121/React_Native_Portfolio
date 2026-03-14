@@ -85,7 +85,7 @@ export default function About() {
           {/* Download CV */}
 
           <a
-            href="/Mansoor2.pdf"
+            href="/Mansoor_React_Native.pdf"
             download
             className="relative inline-flex items-center justify-center gap-2 px-8 py-3 
             rounded-full border border-white/30 bg-white/10 backdrop-blur-lg

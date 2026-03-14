@@ -53,6 +53,27 @@ import n8 from "../Assets/n8.jpeg";
 import std1 from "../Assets/std1.jpeg";
 import std2 from "../Assets/std2.jpeg";
 import std3 from "../Assets/std3.jpeg";
+// 
+import i11 from "../Assets/i11.jpeg";
+
+import i1 from "../Assets/i1.jpeg";
+import i2 from "../Assets/i2.jpeg";
+import i3 from "../Assets/i3.jpeg";
+import i4 from "../Assets/i4.jpeg";
+import i5 from "../Assets/i5.jpeg";
+import i6 from "../Assets/i6.jpeg";
+import i7 from "../Assets/i7.jpeg";
+import i8 from "../Assets/i8.jpeg";
+import i9 from "../Assets/i9.jpeg";
+import i10 from "../Assets/i10.jpeg";
+import i12 from "../Assets/i12.jpeg";
+import i13 from "../Assets/i13.jpeg";
+import i14 from "../Assets/i14.jpeg";
+
+
+
+
+
 
 export default function Testimonials() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -73,7 +94,7 @@ export default function Testimonials() {
       {
       title: "Indeed Job Finder Clone (React Native) ",
       feedback:"A React Native job search application inspired by Indeed. The app allows users to browse and view job listings with a clean UI. Firebase Firestore is used for backend data storage, and reusable components are implemented to maintain a scalable and organized code structure",
-         projectImages:[std1,std2,std3],
+         projectImages:[i11,i1,i2,i3,i4,i5, i6,i7,i8,i9,i10,i12,i13, i14],
       },
     {
       title: "Rect Native Based Food App UI Design ",
