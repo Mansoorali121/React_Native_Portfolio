@@ -84,7 +84,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import namelogo from "./namelogo.png";
+import nanelogo from "./nanelogo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -111,7 +111,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <div className="flex items-center">
-          <img src={namelogo} alt="Logo" className="h-10 md:h-12 w-auto" />
+          <img src={nanelogo} alt="Logo" className="h-20 md:h-100 w-auto" />
         </div>
 
         {/* Desktop Menu */}

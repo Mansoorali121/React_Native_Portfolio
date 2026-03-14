@@ -8,28 +8,70 @@ import Social from "./SocialApp.jpg";
 import SocialApp1 from "./SocialApp1.jpg";
 import SocialApp2 from "./SocialApp2.jpg";
 import SocialApp3 from "./SocialAPp3.jpg";
+import Ft1 from "../Assets/Ft1.jpeg"
+import Ft2 from "../Assets/Ft2.jpeg"
+import Ft3 from "../Assets/Ft3.jpeg"
+// 
+import ft4 from "../Assets/ft4.jpeg"
+import ft5 from "../Assets/ft5.jpeg"
+import ft6 from "../Assets/ft6.jpeg"
+import ft7 from "../Assets/ft7.jpeg"
+import ft8 from "../Assets/ft8.jpeg"
+import ft9 from "../Assets/ft9.jpeg"
+// 
+import w1 from "../Assets/w1.jpeg"
+import w2 from "../Assets/w2.jpeg"
+import w3 from "../Assets/w3.jpeg"
+// 
+import u1 from "../Assets/u1.jpeg"
+import u2 from "../Assets/u2.jpeg"
+import u3 from "../Assets/u3.jpeg"
+import u4 from "../Assets/u4.jpeg"
+import u5 from "../Assets/u5.jpeg"
+
+// 
+import s1 from "../Assets/s1.jpeg"
+import s2 from "../Assets/s2.jpeg"
+import s3 from "../Assets/s3.jpeg"
+
+
+
+
 
 export default function Testimonials() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
+    
     {
-      title: "WhatsApp Clone",
+      title: "WhatsApp UI Design",
       feedback:
-        "A modern WhatsApp clone with real-time chat, sleek UI, and responsive design.",
-      projectImages: [WhatsApp, WhatsApp, WhatsApp],
+        "A modern WhatsApp UI Design with real-time chat, sleek UI, and responsive design.",
+      projectImages: [WhatsApp, w3, w2,w1],
     },
     {
-      title: "E-Commerce App",
+      title: "E-Commerce App UI Design With Firebase Integration ( Crud operations)",
       feedback:
         "A professional e-commerce app with product listings, cart, and secure checkout.",
-      projectImages: [Ecommerce, Ecommerce, Ecommerce],
+      projectImages: [Ecommerce, Ft1, Ft2, Ft3, ft4,ft5,ft6,ft7,ft8,ft9],
     },
     {
       title: "Social Media App",
       feedback:
         "A social networking app designed for smooth interactions and beautiful UI.",
       projectImages: [Social, SocialApp1, SocialApp2, SocialApp3],
+    },
+     {
+      title: "User Profile UI Design App ",
+      feedback:
+        "A user profile React Native app  with beautiful UI.",
+      projectImages: [u1,u2,u3,u4,u5],
+    },
+     {
+      title: "Online Skill Assesments App UI Design ( API Integration) ",
+      feedback:
+        "An online Skill assesment  React Native app  with beautiful UI & course completion certificate.",
+      projectImages: [s1,s2,s3],
     },
   ];
 
